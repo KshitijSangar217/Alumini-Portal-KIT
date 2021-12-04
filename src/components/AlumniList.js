@@ -58,7 +58,7 @@ export default function AlumniList() {
                             </tr>
                         )) : ""}
                     </table>
-                </div>
+                </div>  
                 
             </center>
         </div>
