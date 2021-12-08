@@ -7,7 +7,8 @@ import firebasedb from "./firebase";
 
 import NavBar from './components/NavBar';
 import Alumni from './Alumni';
-import Student from './components/Student'
+import Student from './components/Student';
+import College from './components/College';
 import {BrowserRouter, Routes, Link, Route} from 'react-router-dom';
 
 const pageContent = (val) => {
@@ -21,6 +22,7 @@ ReactDOM.render(
           <Routes>
             <Route exact path="/" element={<Alumni/>}/>
             <Route exact path="/student" element={<Student/>}/>
+            <Route exact path="/college" element={<College/>}/>
           </Routes>
       </BrowserRouter>      
   </React.StrictMode>,

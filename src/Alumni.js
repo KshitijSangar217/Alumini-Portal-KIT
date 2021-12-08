@@ -7,6 +7,7 @@ import AlumniList from './components/AlumniList';
 function Alumni() {
 const [prn, setPrn] = useState();
 const [name , setName] = useState();
+const [email, setEmail] = useState();
 const [address , setAddress] = useState();
 const [cgpa, setCgpa] = useState();
 const [dept, setDept] = useState();
@@ -20,6 +21,7 @@ const submitAlumni = () => {
 	if (name != null && prn != null){
 		database.ref("alumni").child(String(prn)).set({
 			name : name,
+			email: email,
 			address: address,
 			cgpa: cgpa,
 			department: dept,
@@ -39,6 +41,9 @@ return (
 	<input placeholder="Enter your name" value={name}
 	onChange={(e) => setName(e.target.value)}/>
 	<br/><br/>
+	<input placeholder="Enter your email ID" value={email}
+    onChange={(e) => setEmail(e.target.value)}/>
+    <br/><br/>
 	<input placeholder="Enter your Address" value={address}
 	onChange={(e) => setAddress(e.target.value)}/>
 	<br/><br/>
@@ -59,7 +64,7 @@ return (
 	</div>
 	<br />
 	
-	<button onClick={submitAlumni}>Submit</button><br/><br/>
+	<button onClick={submitAlumni}>Submit</button><br/><br/><br />
 	{<AlumniList/>}
 	</center>
 	</div>

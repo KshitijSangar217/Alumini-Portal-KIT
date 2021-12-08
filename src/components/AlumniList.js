@@ -43,6 +43,7 @@ export default function AlumniList() {
                         <tr>
                             <th>PRN</th>
                             <th>Name</th>
+                            <th>Email</th>
                             <th>Department</th>
                             <th>Address</th>
                             <th>Passing Year</th>
@@ -53,6 +54,7 @@ export default function AlumniList() {
                             <tr>
                                 <td>{alumni.id}</td>
                                 <td>{alumni.name}</td>
+                                <td>{alumni.email}</td>
                                 <td>{alumni.department}</td>
                                 <td>{alumni.address}</td>
                                 <td>{alumni.passing_year}</td>
