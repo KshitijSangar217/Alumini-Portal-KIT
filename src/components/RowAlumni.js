@@ -16,7 +16,7 @@ export default function RowAlumni(alumni) {
             <td>{alumni.address}</td>
             <td>{alumni.passing_year}</td>
             <td>{alumni.cgpa}</td>
-            <td><button onClick={deleteAlumni} id={alumni.id}>Delete</button></td>
+            <td><button onClick={deleteAlumni} id={alumni.id}   >Delete</button></td>
         </tr>
     )
 }

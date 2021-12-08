@@ -15,7 +15,7 @@ export default function AlumniList() {
             const alumniList = [];
             for(let id in alumniSnap){
                 alumniList.push({id, ...alumniSnap[id]});
-            }
+            }   
             console.log(alumniList);
             setAlumniList(alumniList);
 
@@ -25,7 +25,11 @@ export default function AlumniList() {
     const deleteAlumni = (alumniID) => {
         console.log(alumniID)
         //const alumniRef = firebase.database().ref("alumni").child(alumniID);
-        
+        /*
+        <th>Action</th>
+
+        <td><button onClick={()=> deleteAlumni} id={alumni.id}>Delete</button></td>
+        */
     }
 
     return (
@@ -43,7 +47,6 @@ export default function AlumniList() {
                             <th>Address</th>
                             <th>Passing Year</th>
                             <th>CGPA</th>
-                            <th>Action</th>
                         </tr>
                         {alumniList ?
                          alumniList.map((alumni, index)=>( 
@@ -54,7 +57,6 @@ export default function AlumniList() {
                                 <td>{alumni.address}</td>
                                 <td>{alumni.passing_year}</td>
                                 <td>{alumni.cgpa}</td>
-                                <td><button onClick={()=> deleteAlumni} id={alumni.id}>Delete</button></td>
                             </tr>
                         )) : ""}
                     </table>

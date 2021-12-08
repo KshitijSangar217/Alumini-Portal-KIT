@@ -1,8 +1,10 @@
 import React, {useEffect} from 'react';
+
 import {useState} from 'react';
 import database from './firebase';
+import AlumniList from './components/AlumniList';
 
-function App() {
+function Alumni() {
 const [prn, setPrn] = useState();
 const [name , setName] = useState();
 const [address , setAddress] = useState();
@@ -15,14 +17,16 @@ const [streamType, setStreamType] = useState();
 
 // SubmitAlumni Function
 const submitAlumni = () => {
-	database.ref("alumni").child(String(prn)).set({
-	name : name,
-	address: address,
-	cgpa: cgpa,
-	department: dept,
-	passing_year: passYr,
-	type: streamType
-	}).catch(alert);
+	if (name != null && prn != null){
+		database.ref("alumni").child(String(prn)).set({
+			name : name,
+			address: address,
+			cgpa: cgpa,
+			department: dept,
+			passing_year: passYr,
+			type: streamType
+			}).catch(alert);
+	}
 }
 
 return (
@@ -56,9 +60,9 @@ return (
 	<br />
 	
 	<button onClick={submitAlumni}>Submit</button><br/><br/>
+	{<AlumniList/>}
 	</center>
 	</div>
 );
 }
-
-export default App;
+export default Alumni;
