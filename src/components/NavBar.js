@@ -15,10 +15,19 @@ export default function NavBar() {
                         <Link class='nav-link' to="/">Alumni</Link>
                     </li>
                     <li class="nav-item">
-                    <Link class='nav-link' to="/student">Student</Link>
+                        <Link class='nav-link' to="/student">Student</Link>
                     </li>
                     <li class="nav-item">
-                    <Link class='nav-link' to="/college">College</Link>
+                        <Link class='nav-link' to="/college">College</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class='nav-link' to="/alumnilist">Alumni List</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class='nav-link' to="/studentlist">Student List</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class='nav-link' to="/collegelist">College List</Link>
                     </li>
                 </ul>
                 </div>

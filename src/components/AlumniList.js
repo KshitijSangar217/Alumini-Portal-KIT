@@ -33,38 +33,40 @@ export default function AlumniList() {
     }
 
     return (
-        <div style={{marginBottom:100}}>
-            <hr />
-            <center>
-            <h1>List of Alumni</h1>
-                <div>
+        <center>
+            <div class="memberlist" style={{marginBottom:100, display:'inline-block'}}>
+                <center>
+                <h1>List of Alumni</h1>
+                    <div>
+                        
+                        <table>
+                            <thead>
+                                <th>PRN</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Department</th>
+                                <th>Address</th>
+                                <th>Passing Year</th>
+                                <th>CGPA</th>  
+                                </thead>
+                            {alumniList ?
+                            alumniList.map((alumni, index)=>( 
+                                <tr>
+                                    <td>{alumni.id}</td>
+                                    <td>{alumni.name}</td>
+                                    <td>{alumni.email}</td>
+                                    <td>{alumni.department}</td>
+                                    <td>{alumni.address}</td>
+                                    <td>{alumni.passing_year}</td>
+                                    <td>{alumni.cgpa}</td>
+                                </tr>
+                            )) : ""}
+                        </table>
+                    </div>  
                     
-                    <table>
-                        <tr>
-                            <th>PRN</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Department</th>
-                            <th>Address</th>
-                            <th>Passing Year</th>
-                            <th>CGPA</th>
-                        </tr>
-                        {alumniList ?
-                         alumniList.map((alumni, index)=>( 
-                            <tr>
-                                <td>{alumni.id}</td>
-                                <td>{alumni.name}</td>
-                                <td>{alumni.email}</td>
-                                <td>{alumni.department}</td>
-                                <td>{alumni.address}</td>
-                                <td>{alumni.passing_year}</td>
-                                <td>{alumni.cgpa}</td>
-                            </tr>
-                        )) : ""}
-                    </table>
-                </div>  
-                
-            </center>
-        </div>
+                </center>
+            </div>
+        </center>
+        
     )
 }

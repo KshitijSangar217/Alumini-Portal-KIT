@@ -8,8 +8,12 @@ import NavBar from './components/NavBar';
 import Alumni from './Alumni';
 import Student from './components/Student';
 import College from './components/College';
-//import App from './components/App';
-/*import App from './components/App';*/
+
+import AlumniList from './components/AlumniList';
+import StudentList from './components/StudentList';
+import CollegeList from './components/CollegeList';
+//import App from './components/Chat';
+/*import App from './components/Chat';*/
 import {BrowserRouter, Routes, Link, Route} from 'react-router-dom';
 
 const pageContent = (val) => {
@@ -24,8 +28,9 @@ ReactDOM.render(
             <Route exact path="/" element={<Alumni/>}/>
             <Route exact path="/student" element={<Student/>}/>
             <Route exact path="/college" element={<College/>}/>
-            
-
+            <Route exact path="/alumnilist" element={<AlumniList/>}/>
+            <Route exact path="/studentlist" element={<StudentList/>}/>
+            <Route exact path="/collegelist" element={<CollegeList/>}/>
           </Routes>
       </BrowserRouter>      
   </React.StrictMode>,

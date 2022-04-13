@@ -55,10 +55,10 @@ export default function CollegeList() {
 
     return (
         <div style={{marginBottom:100}}>
-            <hr />
             <center>
-            <h3>List of Events</h3>
-                <div>
+            
+                <div class="memberlist">
+                <h3>List of Events</h3>
                     <table>
                         <tr>
                             <th>Name</th>
@@ -75,9 +75,9 @@ export default function CollegeList() {
                         )) : ""}
                     </table>
                 </div> 
-                <br /><br />
+
+                <div class="memberlist">
                 <h3>List of Workshops</h3>
-                <div>
                     <table>
                         <tr>
                             <th>Name</th>

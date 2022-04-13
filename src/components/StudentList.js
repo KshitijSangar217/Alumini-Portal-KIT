@@ -33,8 +33,7 @@ export default function StudentList() {
     }
 
     return (
-        <div style={{marginBottom:100}}>
-            <hr />
+        <div class="memberlist" style={{marginBottom:100}}>
             <center>
             <h1>List of Students</h1>
                 <div>
