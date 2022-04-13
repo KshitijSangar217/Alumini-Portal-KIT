@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {useState} from 'react';
-import database from '../firebase';
+import database from '../firebaseData';
 import StudentList from './StudentList';
 //import AlumniList from './components/AlumniList';
 

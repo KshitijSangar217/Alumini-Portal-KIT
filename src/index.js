@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import firebasedb from "./firebase";
-
+import firebasedb from "./firebaseData";
 
 import NavBar from './components/NavBar';
 import Alumni from './Alumni';
 import Student from './components/Student';
 import College from './components/College';
+//import App from './components/App';
+/*import App from './components/App';*/
 import {BrowserRouter, Routes, Link, Route} from 'react-router-dom';
 
 const pageContent = (val) => {
@@ -23,6 +24,8 @@ ReactDOM.render(
             <Route exact path="/" element={<Alumni/>}/>
             <Route exact path="/student" element={<Student/>}/>
             <Route exact path="/college" element={<College/>}/>
+            
+
           </Routes>
       </BrowserRouter>      
   </React.StrictMode>,

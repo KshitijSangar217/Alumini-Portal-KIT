@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 
 import {useState} from 'react';
-import database from '../firebase';
+import database from '../firebaseData';
 import CollegeList from './CollegeList';
 //import AlumniList from './components/AlumniList';
 
